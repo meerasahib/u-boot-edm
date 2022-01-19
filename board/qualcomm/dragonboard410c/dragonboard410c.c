@@ -10,7 +10,7 @@
 #include <dm.h>
 #include <usb.h>
 #include <asm/gpio.h>
-//test
+
 DECLARE_GLOBAL_DATA_PTR;
 
 int dram_init(void)
