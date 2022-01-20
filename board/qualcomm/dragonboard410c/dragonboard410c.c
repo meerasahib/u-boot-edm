@@ -12,7 +12,7 @@
 #include <asm/gpio.h>
 
 DECLARE_GLOBAL_DATA_PTR;
-
+//test
 int dram_init(void)
 {
 	gd->ram_size = PHYS_SDRAM_1_SIZE;
