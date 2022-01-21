@@ -81,9 +81,10 @@
 				algo = "sha1";
 			};
 		};
-		fdt@21 {
-			description = "imx6dl-edm1-qca_fairy";
-			data = /incbin/("./dtb/imx6dl-edm1-qca_fairy.dtb");
+		/* imx6q */
+		fdt@25 {
+			description = "imx6q-edm1_fairy";
+			data = /incbin/("./dtb/imx6q-edm1_fairy.dtb");
 			type = "flat_dt";
 			arch = "arm";
 			compression = "none";
@@ -92,9 +93,9 @@
 				algo = "sha1";
 			};
 		};
-		fdt@22 {
-			description = "imx6dl-edm1-qca_gnome";
-			data = /incbin/("./dtb/imx6dl-edm1-qca_gnome.dtb");
+		fdt@26 {
+			description = "imx6q-edm1_gnome";
+			data = /incbin/("./dtb/imx6q-edm1_gnome.dtb");
 			type = "flat_dt";
 			arch = "arm";
 			compression = "none";
@@ -103,9 +104,9 @@
 				algo = "sha1";
 			};
 		};
-		fdt@23 {
-			description = "imx6dl-edm1-qca_tc0700";
-			data = /incbin/("./dtb/imx6dl-edm1-qca_tc0700.dtb");
+		fdt@27 {
+			description = "imx6q-edm1_tc0700";
+			data = /incbin/("./dtb/imx6q-edm1_tc0700.dtb");
 			type = "flat_dt";
 			arch = "arm";
 			compression = "none";
@@ -114,9 +115,21 @@
 				algo = "sha1";
 			};
 		};
-		fdt@24 {
-			description = "imx6dl-edm1-qca_tc1000";
-			data = /incbin/("./dtb/imx6dl-edm1-qca_tc1000.dtb");
+		fdt@28 {
+			description = "imx6q-edm1_tc1000";
+			data = /incbin/("./dtb/imx6q-edm1_tc1000.dtb");
+			type = "flat_dt";
+			arch = "arm";
+			compression = "none";
+			load = <0x1B000000>;
+			hash@1 {
+				algo = "sha1";
+			};
+		};
+		/* imx6qp */
+		fdt@33 {
+			description = "imx6qp-edm1_fairy";
+			data = /incbin/("./dtb/imx6qp-edm1_fairy.dtb");
 			type = "flat_dt";
 			arch = "arm";
 			compression = "none";
@@ -154,29 +167,37 @@
 			ramdisk = "ramdisk@1";
 			fdt = "fdt@20";
 		};
-		config@imx6dl-edm1-qca_fairy {
-			description = "EDM1-QCA-FAIRY-IMX6DL";
+		/* imx6q */
+		config@imx6q-edm1_fairy {
+			description = "EDM1-FAIRY-IMX6Q";
 			kernel = "kernel@1";
 			ramdisk = "ramdisk@1";
-			fdt = "fdt@21";
+			fdt = "fdt@25";
 		};
-		config@imx6dl-edm1-qca-gnome {
-			description = "EDM1-QCA-GNOME-IMX6DL";
+		config@imx6q-edm1-gnome {
+			description = "EDM1-GNOME-IMX6Q";
 			kernel = "kernel@1";
 			ramdisk = "ramdisk@1";
-			fdt = "fdt@22";
+			fdt = "fdt@26";
 		};
-		config@imx6dl-edm1-qca_tc0700 {
-			description = "EDM1-QCA-TC0700-IMX6DL";
+		config@imx6q-edm1_tc0700 {
+			description = "EDM1-TC0700-IMX6Q";
 			kernel = "kernel@1";
 			ramdisk = "ramdisk@1";
-			fdt = "fdt@23";
+			fdt = "fdt@27";
 		};
-		config@imx6dl-edm1-qca_tc1000 {
-			description = "EDM1-QCA-TC1000-IMX6DL";
+		config@imx6q-edm1_tc1000 {
+			description = "EDM1-TC1000-IMX6Q";
 			kernel = "kernel@1";
 			ramdisk = "ramdisk@1";
-			fdt = "fdt@24";
+			fdt = "fdt@28";
+		};
+		/* imx6qp */
+		config@imx6qp-edm1_fairy {
+			description = "EDM1-FAIRY-IMX6QP";
+			kernel = "kernel@1";
+			ramdisk = "ramdisk@1";
+			fdt = "fdt@33";
 		};
 	};
 };
